@@ -1,0 +1,16 @@
+<h1>学校作成</h1>
+<%= form_for (@user, url: {controller: 'posts', action: 'school'}) do |f| %>
+  <div class="form-group">
+    <%= f.label :username, '学校名' %>
+    <%= f.text_field :username, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, 'パスワード' %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, 'パスワード（確認）' %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <%= f.submit '作成', class: 'btn btn-primary' %>
+<% end %>
